@@ -12,7 +12,7 @@ def print_step(s, lvl):
 
 def run_algorithm(f, val, lvl=0):
 	# First let's determine which atom to replace
-	to_replace = Counter([l for l in str(f) if l.isalpha()]).most_common(1)[0][0]
+	to_replace = Counter([l for l in str(f) if l.isalpha() and l != 'v']).most_common(1)[0][0]
 
 	print_step('[%s]'% f, lvl)
 	# Replace it
